@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>171024 | log for study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="오늘 한 일 깃 브랜치 공부  HEAD: 현재 사용 중인 브랜치의 선두 부분 git branch  : 브랜치 생성 git branch : 브랜치 목록 전체 확인. ‘*’ 붙은 게 현재 선택된 브랜치 git checkout  : 사용할 브랜치 지정 git checkout -b  :브랜치 작성과 체크아웃을 한꺼번에 실행 충돌이 안 났을 때 병합: git mer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="171024">
+<meta property="og:url" content="http://chemainus04.github.io/2017/10/24/171024/index.html">
+<meta property="og:site_name" content="log for study">
+<meta property="og:description" content="오늘 한 일 깃 브랜치 공부  HEAD: 현재 사용 중인 브랜치의 선두 부분 git branch  : 브랜치 생성 git branch : 브랜치 목록 전체 확인. ‘*’ 붙은 게 현재 선택된 브랜치 git checkout  : 사용할 브랜치 지정 git checkout -b  :브랜치 작성과 체크아웃을 한꺼번에 실행 충돌이 안 났을 때 병합: git mer">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-10-24T16:00:41.046Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="171024">
+<meta name="twitter:description" content="오늘 한 일 깃 브랜치 공부  HEAD: 현재 사용 중인 브랜치의 선두 부분 git branch  : 브랜치 생성 git branch : 브랜치 목록 전체 확인. ‘*’ 붙은 게 현재 선택된 브랜치 git checkout  : 사용할 브랜치 지정 git checkout -b  :브랜치 작성과 체크아웃을 한꺼번에 실행 충돌이 안 났을 때 병합: git mer">
+  
+    <link rel="alternate" href="/atom.xml" title="log for study" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">log for study</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">plus hobby</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chemainus04.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-171024" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/24/171024/" class="article-date">
+  <time datetime="2017-10-24T14:59:49.000Z" itemprop="datePublished">2017-10-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      171024
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="오늘-한-일"><a href="#오늘-한-일" class="headerlink" title="오늘 한 일"></a>오늘 한 일</h3><ol>
+<li><p>깃 브랜치 공부</p>
+<ul>
+<li>HEAD: 현재 사용 중인 브랜치의 선두 부분</li>
+<li>git branch <branchname> : 브랜치 생성</branchname></li>
+<li>git branch : 브랜치 목록 전체 확인. ‘*’ 붙은 게 현재 선택된 브랜치</li>
+<li>git checkout <branch> : 사용할 브랜치 지정</branch></li>
+<li>git checkout -b <branch> :브랜치 작성과 체크아웃을 한꺼번에 실행</branch></li>
+<li>충돌이 안 났을 때 병합: git merge &lt;병합할 브랜치&gt; (fast-foward 병합) </li>
+<li>충돌나면 파일을 직접 수정한 뒤에 add, commit 함 (non fast-forward 병합)</li>
+<li>브랜치 종류 </li>
+</ul>
+<ol>
+<li>master:  배포 가능한 상태만 관리</li>
+<li>develop: 통합 브랜치 역할. 평소에 이 브랜치를 기반으로 개발 진행</li>
+<li>feature: 토픽 브랜치 역할. 새로운 기능 개발 및 버그 수정이 필요할 때 분기. 개발 완료되면 develop 브랜치로 병합.</li>
+</ol>
+</li>
+<li><p>리눅스 명령어 공부</p>
+<ul>
+<li>history | grep [검색할 내용]: 검색 내용을 가진 명령어 기록 찾아줌</li>
+<li>히스토리 저장 파일: home 디렉토리의 .bahs_history </li>
+<li>vi 블록 지정하기: etc 후 v(비주얼 모드)</li>
+<li>y: 블록 복사, p: 블록 붙여넣기</li>
+<li>u: 실행 취소</li>
+<li>U: 현재 커서가 위치하고 있는 줄에서 했던 모든 작업만 취소 </li>
+<li>Ctrl + R : 취소를 취소</li>
+</ul>
+</li>
+<li><p>로또 프로젝트 깃허브에서 받아오기</p>
+<ul>
+<li>fork 받아옴 &gt; clone &gt; 내 아이디 브랜치 만듦 &gt; 개발할 브랜치(step1) 만듦</li>
+<li>깃허브에서 가져온 프로젝트로 이클립스 새 프로젝트 만들기:  <p> import – Maven – Existing Maven Projects – 워킹트리 지정 </p>
+</li>
+</ul>
+</li>
+<li><p>리스트와 맵을 출력하면 값을 한번에 보여준다..는 걸 이제 알았다. </p>
+</li>
+<li>String.join(): 배열, 컬렉션 값을 구분자로 합쳐 하나의 문자열로 만든다.</li>
+</ol>
+<h3 id="궁금한-점"><a href="#궁금한-점" class="headerlink" title="궁금한 점"></a>궁금한 점</h3><ol>
+<li>우리가 하는 프로젝트에서는 내 아이디 브랜치가 develop이고 step1이 feature 인가?</li>
+</ol>
+<h3 id="내일-할-일"><a href="#내일-할-일" class="headerlink" title="내일 할 일"></a>내일 할 일</h3><ol>
+<li>racingcar 싱크 맞추기</li>
+<li>로또 구현 - slipp 보면서 객체지향에 맞게 설계했나 확인하자 </li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chemainus04.github.io/2017/10/24/171024/" data-id="cj95strre00013owhwzdergy0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/23/2017-10-20-171020/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/24/171024/">171024</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/23/2017-10-20-171020/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/23/171023/">171023</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/17/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Jin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
