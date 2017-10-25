@@ -66,6 +66,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-171025" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/25/171025/" class="article-date">
+  <time datetime="2017-10-25T13:17:01.000Z" itemprop="datePublished">2017-10-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/25/171025/">171025</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="오늘-한-일"><a href="#오늘-한-일" class="headerlink" title="오늘 한 일"></a>오늘 한 일</h3><ol>
+<li><p>slipp 코드리뷰 읽음<br>나중에 한 번에 정리해야겠다. 아래 내용을 다 쓰고 1번을 마지막으로 쓰고<br>있는데 피곤해서 못 쓰겠다. </p>
+</li>
+<li><p>Hue 한테 vi 명령어 배움<br>-a: 커서 다음 칸에 쓰기<br>-A: 그 줄의 맨 끝에 쓰기<br>-o: 아랫줄에 쓰기<br>-O: 윗줄에 쓰기<br>-I: 맨 앞에 쓰기<br>-dd: 지움<br>-d2d: 2줄 지움<br>-x: delete<br>-X: backspace<br>-yy: 복사<br>-y2y: 2줄 복사<br>-p: 붙여넣기<br>-b: 해당 단어 앞에 커서<br>-e: 해당 단어 끝에 커서<br>-2e: 두 단어 끝에 커서<br>-y2e: 단어 2개 복사<br>-gg: 문서 맨 윗줄로 이동<br>-G: 문서 맨 끝줄로 이동<br>-H: page up<br>-L: page down<br>-/단어검색 후 n:다음 단어, N:이전 단어<br>-/{: 해당 문단 위 /}: 해당 문단 아래 </p>
+</li>
+<li><p>중첩 클래스와 익명 객체 공부<br>slipp에 random 값을 사용하면 테스트하기 어려우니까 Random을 상속하는<br>익명 클래스를 쓰면 좋을 것 같다는 말이 있었다. 거기에 쓰인 코드를<br>이해하지 못해서 기본서로 공부했는데 시간이 꽤 걸렸다. 아직 더 볼 설명이랑<br>연습문제가 남았다.<br>개념은 얼핏 알겠는데 내가 필요할 때 쓸 수 있을 정도로 이해하진 못 했다. </p>
+</li>
+</ol>
+<h3 id="느낀점"><a href="#느낀점" class="headerlink" title="느낀점"></a>느낀점</h3><p>객체지향이 참 어렵다. 자바에 대해 조건문, 반복문 말고 제대로 아는 게 없다.<br>다시 처음 배우는 때로 돌아갔는데 약간 아는 내용이 있는 기분이다. 재밌다.<br>책을 계속 보는게 지치긴 하지만.</p>
+<h3 id="내일-할-일"><a href="#내일-할-일" class="headerlink" title="내일 할 일"></a>내일 할 일</h3><p>오늘 로또 설계랑 구현을 하나도 안 해서 해야 하는데,<br>한편으론 자바 기본서 정독하고 연습문제 풀고 싶기도 하다.<br>둘 다 하기엔 둘 다 시간이 오래 걸리고.<br>어차피 로또에서도 상속, 컬렉션 써야되서 한 번 쭉 공부는 해야할 것 같은데..<br>일단 내일은 설명 한 번 읽고 연습문제를 풀어보자. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chemainus04.github.io/2017/10/25/171025/" data-id="cj976yt510000cbwhuq78w5zq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-171024" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/10/24/171024/" class="article-date">
@@ -92,10 +138,10 @@
 <li><p>깃 브랜치 공부</p>
 <ul>
 <li>HEAD: 현재 사용 중인 브랜치의 선두 부분</li>
-<li>git branch <branchname> : 브랜치 생성</branchname></li>
+<li>git branch [branchname] : 브랜치 생성</li>
 <li>git branch : 브랜치 목록 전체 확인. ‘*’ 붙은 게 현재 선택된 브랜치</li>
-<li>git checkout <branch> : 사용할 브랜치 지정</branch></li>
-<li>git checkout -b <branch> :브랜치 작성과 체크아웃을 한꺼번에 실행</branch></li>
+<li>git checkout [branch] : 사용할 브랜치 지정</li>
+<li>git checkout -b [branch] :브랜치 작성과 체크아웃을 한꺼번에 실행</li>
 <li>충돌이 안 났을 때 병합: git merge &lt;병합할 브랜치&gt; (fast-foward 병합) </li>
 <li>충돌나면 파일을 직접 수정한 뒤에 add, commit 함 (non fast-forward 병합)</li>
 <li>브랜치 종류 </li>
@@ -143,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/24/171024/" data-id="cj95t1792000288wh12dn3foz" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/24/171024/" data-id="cj976yt5r0002cbwhbycw4maz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -238,7 +284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/23/2017-10-20-171020/" data-id="cj95t178q000088whjwdnehrt" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/23/2017-10-20-171020/" data-id="cj976yt5w0004cbwhe6al8inv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -336,7 +382,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/23/171023/" data-id="cj95t1794000388whog8j8w3c" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/23/171023/" data-id="cj976yt5p0001cbwhzyefio6e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -381,7 +427,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/17/hello-world/" data-id="cj95t178x000188whl20gxvrv" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/17/hello-world/" data-id="cj976yt5v0003cbwh4qj36stb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -419,6 +465,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/10/25/171025/">171025</a>
+          </li>
         
           <li>
             <a href="/2017/10/24/171024/">171024</a>
