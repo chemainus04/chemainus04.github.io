@@ -53,9 +53,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chemainus04.github.io"></form>
@@ -117,7 +117,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/29/171027/" data-id="cj9cr5s1r0003j0whdm3nifkq" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/29/171027/" data-id="cj9cr5s1r0003j0whdm3nifkq" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -151,11 +151,11 @@
       
         <h3 id="한-일"><a href="#한-일" class="headerlink" title="한 일"></a>한 일</h3><ol>
 <li><p>포비한테 slipp에서 궁금한 것 물어봄</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">   @Test</div><div class="line">    public void run_random값_3() throws Exception &#123;</div><div class="line">        Car car = new Car();</div><div class="line">        car.run(createRandom(3));</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    @Test</div><div class="line">    public void run_random값_4() throws Exception &#123;</div><div class="line">        Car car = new Car();</div><div class="line">        car.run(createRandom(4));</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    private Random createRandom(int returnValue) &#123;</div><div class="line">        return new Random() &#123;</div><div class="line">            public int nextInt(int bound) &#123;</div><div class="line">                return returnValue;</div><div class="line">            &#125;;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">``` </div><div class="line">포비 설명: 이 부분은 오직 테스트를 위한 코드. 프로덕션 코드에서는 실제 Random 클래스를</div><div class="line">사용. Random을 쓰면 테스트가 어려우니 Random 클래스를 상속하는 익명객체를 </div><div class="line">만들고 nextInt를 오버라이딩해서 테스트할 수를 반환. 호출할 때 조건을 만족하는 </div><div class="line">경우와 아닌 경우를 인자로 넘겨준다.</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">   @Test</div><div class="line">    public void run_random값_3() throws Exception &#123;</div><div class="line">        Car car = new Car();</div><div class="line">        car.run(createRandom(3));</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    @Test</div><div class="line">    public void run_random값_4() throws Exception &#123;</div><div class="line">        Car car = new Car();</div><div class="line">        car.run(createRandom(4));</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    private Random createRandom(int returnValue) &#123;</div><div class="line">        return new Random() &#123;</div><div class="line">            public int nextInt(int bound) &#123;</div><div class="line">                return returnValue;</div><div class="line">            &#125;;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">``` </div><div class="line"></div><div class="line">포비 설명: 이 부분은 오직 테스트를 위한 코드. 프로덕션 코드에서는 실제 Random 클래스를</div><div class="line">사용. Random을 쓰면 테스트가 어려우니 Random 클래스를 상속하는 익명객체를 </div><div class="line">만들고 nextInt를 오버라이딩해서 테스트할 수를 반환. 호출할 때 조건을 만족하는 </div><div class="line">경우와 아닌 경우를 인자로 넘겨준다.</div></pre></td></tr></table></figure>
 <p> for(int i=0; i&lt;carList.size(); i++) {</p>
 <pre><code>if(maxPosition &lt; carList.get(i).getPosition()) maxPosition = carList.get(i).getPosition();
 </code></pre><p> }</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&quot;carList.get(i).getPosition()&quot;에 대해 &quot;한 줄에 점 하나만 찍는다. 일급 콜렉션을 사용해 해결해보자.&quot; </div><div class="line">라는 코멘트가 있어 물어보니, 일급 콜렉션 사용은 코드리뷰 해 주신대로 List&lt;Car&gt;를 가진</div><div class="line">Cars 클래스 구현이었다. 컬렉션을 가지고 있으면(상태) 그에 대한 로직이 있어야 객체지향적이다.</div><div class="line">+ Cars 클래스를 구현했지만 foreach를 안 쓰고 for문을 썼다면 위와 같은 코드가 나왔을 거라  </div><div class="line">여쭤보니, 그 경우 carList.get(i)를 따로 뺄 수 있다고 말해주셨다.-자주 쓰이는 중복코드기도 하고-</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&quot;carList.get(i).getPosition()&quot;에 대해 &quot;한 줄에 점 하나만 찍는다. 일급 콜렉션을 사용해 해결해보자.&quot; </div><div class="line">라는 코멘트가 있어 물어보니, 일급 콜렉션 사용은 코드리뷰 해 주신대로 List&lt;Car&gt;를 가진</div><div class="line">Cars 클래스 구현이었다. 컬렉션을 가지고 있으면(상태) 그에 대한 로직이 있어야 객체지향적이다.</div><div class="line">+ Cars 클래스를 구현했지만 foreach를 안 쓰고 for문을 썼다면 위와 같은 코드가 나왔을 거라  </div><div class="line">여쭤보니, 그 경우 carList.get(i)를 따로 뺄 수 있다고 말해주셨다.-자주 쓰이는 중복코드기도 하고-</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>private findCar(int index) {<br>    return carList.get(index);<br>}<br>```</p>
@@ -169,7 +169,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/27/171026/" data-id="cj9cr5s1u0004j0whr1gwpka2" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/27/171026/" data-id="cj9cr5s1u0004j0whr1gwpka2" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -218,7 +218,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/25/171025/" data-id="cj9cr5s1p0002j0whjj9e6pry" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/25/171025/" data-id="cj9cr5s1p0002j0whjj9e6pry" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -305,7 +305,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/24/171024/" data-id="cj9cr5s1l0001j0wh3zjxoo5v" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/24/171024/" data-id="cj9cr5s1l0001j0wh3zjxoo5v" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -400,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/23/2017-10-20-171020/" data-id="cj9cr5s1w0005j0wht8op8flz" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/23/2017-10-20-171020/" data-id="cj9cr5s1w0005j0wht8op8flz" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -498,7 +498,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/23/171023/" data-id="cj9cr5s1d0000j0whkn475jne" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/23/171023/" data-id="cj9cr5s1d0000j0whkn475jne" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -543,7 +543,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/17/hello-world/" data-id="cj9cr5s200006j0whlui76jmq" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/17/hello-world/" data-id="cj9cr5s200006j0whlui76jmq" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -578,7 +578,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -615,7 +615,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Jin<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
