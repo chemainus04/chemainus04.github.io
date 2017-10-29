@@ -66,6 +66,119 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-171027" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/29/171027/" class="article-date">
+  <time datetime="2017-10-29T10:59:31.000Z" itemprop="datePublished">2017-10-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/29/171027/">171027</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###한 일</p>
+<ol>
+<li><p>로또 구현</p>
+</li>
+<li><p>vim, ssh로 리눅스 접속 강의</p>
+<ul>
+<li>aws에서 서버 만듦 -&gt; 비밀키 다운받음. </li>
+<li>cd 다운받은 폴더 -&gt; chmod 400 키.pem</li>
+<li>ssh -i 키.pem ubuntu@ip주소-&gt; 서버 접속됨</li>
+</ul>
+</li>
+<li><p>알고리즘 강의</p>
+<ul>
+<li>공간(메모리)/시간 복잡도 계산</li>
+<li>알고리즘을 잘 한다? 재귀호출, 함수 사용법, 메모리구조 이해, 객체/배열/참조/포인터/메모리 할당에 대한 이해</li>
+<li>기본 자료구조: 배열, 리스트, 해시, 스택, 큐, 트리, 그래프, 해시</li>
+<li>정렬, 선택, 버블, 삽입, 쉘, 퀵, 기수, 힙</li>
+<li>트리와 검색: 순차 검색, 2진 검색, BTS 검색, AVL 트리, 레드블랙 트리, MST, B-트리</li>
+<li>그래프와 탐색: </li>
+<li>알고리즘 전략: 휴리스틱, 그리디, 몬테카를로, 분할 정복, 다이나믹 프로그램, 백 트래킹</li>
+<li>수학적지식:이산수학(+선형대수) - 칸 아카데미, 독학사 이산수학, ‘Rozen의 이산수학’ </li>
+<li>사이트: 백준온라인, hackerrank, leetcode, topcoder</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chemainus04.github.io/2017/10/29/171027/" data-id="cj9cr2w1a0002fewhovavyvi8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-171026" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/27/171026/" class="article-date">
+  <time datetime="2017-10-27T01:09:28.000Z" itemprop="datePublished">2017-10-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/27/171026/">171026</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="한-일"><a href="#한-일" class="headerlink" title="한 일"></a>한 일</h3><ol>
+<li><p>포비한테 slipp에서 궁금한 것 물어봄</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">   @Test</div><div class="line">    public void run_random값_3() throws Exception &#123;</div><div class="line">        Car car = new Car();</div><div class="line">        car.run(createRandom(3));</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    @Test</div><div class="line">    public void run_random값_4() throws Exception &#123;</div><div class="line">        Car car = new Car();</div><div class="line">        car.run(createRandom(4));</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    private Random createRandom(int returnValue) &#123;</div><div class="line">        return new Random() &#123;</div><div class="line">            public int nextInt(int bound) &#123;</div><div class="line">                return returnValue;</div><div class="line">            &#125;;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">``` </div><div class="line">포비 설명: 이 부분은 오직 테스트를 위한 코드. 프로덕션 코드에서는 실제 Random 클래스를</div><div class="line">사용. Random을 쓰면 테스트가 어려우니 Random 클래스를 상속하는 익명객체를 </div><div class="line">만들고 nextInt를 오버라이딩해서 테스트할 수를 반환. 호출할 때 조건을 만족하는 </div><div class="line">경우와 아닌 경우를 인자로 넘겨준다.</div></pre></td></tr></table></figure>
+<p> for(int i=0; i&lt;carList.size(); i++) {</p>
+<pre><code>if(maxPosition &lt; carList.get(i).getPosition()) maxPosition = carList.get(i).getPosition();
+</code></pre><p> }</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&quot;carList.get(i).getPosition()&quot;에 대해 &quot;한 줄에 점 하나만 찍는다. 일급 콜렉션을 사용해 해결해보자.&quot; </div><div class="line">라는 코멘트가 있어 물어보니, 일급 콜렉션 사용은 코드리뷰 해 주신대로 List&lt;Car&gt;를 가진</div><div class="line">Cars 클래스 구현이었다. 컬렉션을 가지고 있으면(상태) 그에 대한 로직이 있어야 객체지향적이다.</div><div class="line">+ Cars 클래스를 구현했지만 foreach를 안 쓰고 for문을 썼다면 위와 같은 코드가 나왔을 거라  </div><div class="line">여쭤보니, 그 경우 carList.get(i)를 따로 뺄 수 있다고 말해주셨다.-자주 쓰이는 중복코드기도 하고-</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>private findCar(int index) {<br>    return carList.get(index);<br>}<br>```</p>
+<ol>
+<li><p>스트림 공부<br>함수형을 처음 공부해서 굉장히 새로웠다.     </p>
+</li>
+<li><p>로또 구현</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chemainus04.github.io/2017/10/27/171026/" data-id="cj9cr2w100000fewhlt7shgep" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-171025" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/10/25/171025/" class="article-date">
@@ -105,7 +218,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/25/171025/" data-id="cj977azaf0002hdwh6gxut2er" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/25/171025/" data-id="cj9cr2w1c0003fewh9uwn76mp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -192,7 +305,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/24/171024/" data-id="cj977aza50000hdwhfgaxr3pg" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/24/171024/" data-id="cj9cr2w1d0004fewhblrd94kz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -287,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/23/2017-10-20-171020/" data-id="cj977azai0003hdwh3zqtr9gz" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/23/2017-10-20-171020/" data-id="cj9cr2w1m0006fewhc2oo0863" class="article-share-link">Share</a>
       
       
     </footer>
@@ -385,7 +498,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/23/171023/" data-id="cj977azac0001hdwhfmcv304w" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/23/171023/" data-id="cj9cr2w170001fewhavqcf4km" class="article-share-link">Share</a>
       
       
     </footer>
@@ -430,7 +543,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/17/hello-world/" data-id="cj977azal0004hdwhlvgm2650" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/17/hello-world/" data-id="cj9cr2w1k0005fewh25faaso0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -470,6 +583,14 @@
       <ul>
         
           <li>
+            <a href="/2017/10/29/171027/">171027</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/27/171026/">171026</a>
+          </li>
+        
+          <li>
             <a href="/2017/10/25/171025/">171025</a>
           </li>
         
@@ -479,14 +600,6 @@
         
           <li>
             <a href="/2017/10/23/2017-10-20-171020/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/10/23/171023/">171023</a>
-          </li>
-        
-          <li>
-            <a href="/2017/10/17/hello-world/">Hello World</a>
           </li>
         
       </ul>
