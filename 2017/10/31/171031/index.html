@@ -5,17 +5,17 @@
   
   <title>171031 | log for study</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="오늘 한 일 TDD 강의 TDD 해보기..(별로 못 함..) 면담 로또 리뷰 받고 수정참 배운 게 많은데 너무 피곤해서 정리를 못 하겠다…  내일 할 일 Lotto, WinningLotto 리뷰 상속/생성자 부분 정리    부모 클래스 선언 후 자식 생성자 호출했을 때 어떤 식으로 생성되는 지 정리전에 로또 생성자에서 로또 번호, 보너스 번호를 만들다가 보">
+  <meta name="description" content="오늘 한 일 TDD 강의 TDD 해보기..(별로 못 함..) 면담 로또 리뷰 받고 수정참 배운 게 많은데 너무 피곤해서 정리를 못 하겠다…  내일 할 일 Lotto, WinningLotto 상속/생성자 부분 정리 + 부모 타입 선언 후 자식 생성했을 때 생성 과정 정리전에 로또 생성자에서 로또 번호, 보너스 번호를 만들다가 보너스 번호가 초기화 되는 문제가">
 <meta property="og:type" content="article">
 <meta property="og:title" content="171031">
 <meta property="og:url" content="http://chemainus04.github.io/2017/10/31/171031/index.html">
 <meta property="og:site_name" content="log for study">
-<meta property="og:description" content="오늘 한 일 TDD 강의 TDD 해보기..(별로 못 함..) 면담 로또 리뷰 받고 수정참 배운 게 많은데 너무 피곤해서 정리를 못 하겠다…  내일 할 일 Lotto, WinningLotto 리뷰 상속/생성자 부분 정리    부모 클래스 선언 후 자식 생성자 호출했을 때 어떤 식으로 생성되는 지 정리전에 로또 생성자에서 로또 번호, 보너스 번호를 만들다가 보">
+<meta property="og:description" content="오늘 한 일 TDD 강의 TDD 해보기..(별로 못 함..) 면담 로또 리뷰 받고 수정참 배운 게 많은데 너무 피곤해서 정리를 못 하겠다…  내일 할 일 Lotto, WinningLotto 상속/생성자 부분 정리 + 부모 타입 선언 후 자식 생성했을 때 생성 과정 정리전에 로또 생성자에서 로또 번호, 보너스 번호를 만들다가 보너스 번호가 초기화 되는 문제가">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-31T15:31:40.991Z">
+<meta property="og:updated_time" content="2017-10-31T15:44:17.671Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="171031">
-<meta name="twitter:description" content="오늘 한 일 TDD 강의 TDD 해보기..(별로 못 함..) 면담 로또 리뷰 받고 수정참 배운 게 많은데 너무 피곤해서 정리를 못 하겠다…  내일 할 일 Lotto, WinningLotto 리뷰 상속/생성자 부분 정리    부모 클래스 선언 후 자식 생성자 호출했을 때 어떤 식으로 생성되는 지 정리전에 로또 생성자에서 로또 번호, 보너스 번호를 만들다가 보">
+<meta name="twitter:description" content="오늘 한 일 TDD 강의 TDD 해보기..(별로 못 함..) 면담 로또 리뷰 받고 수정참 배운 게 많은데 너무 피곤해서 정리를 못 하겠다…  내일 할 일 Lotto, WinningLotto 상속/생성자 부분 정리 + 부모 타입 선언 후 자식 생성했을 때 생성 과정 정리전에 로또 생성자에서 로또 번호, 보너스 번호를 만들다가 보너스 번호가 초기화 되는 문제가">
   
     <link rel="alternate" href="/atom.xml" title="log for study" type="application/atom+xml">
   
@@ -57,9 +57,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chemainus04.github.io"></form>
@@ -97,19 +97,14 @@
 <li>로또 리뷰 받고 수정<br>참 배운 게 많은데 너무 피곤해서 정리를 못 하겠다…</li>
 </ol>
 <h3 id="내일-할-일"><a href="#내일-할-일" class="headerlink" title="내일 할 일"></a>내일 할 일</h3><ul>
-<li>Lotto, WinningLotto 리뷰 상속/생성자 부분 정리 </li>
-</ul>
-<ul>
-<li>부모 클래스 선언 후 자식 생성자 호출했을 때 어떤 식으로 생성되는 지 정리<br>전에 로또 생성자에서 로또 번호, 보너스 번호를 만들다가 보너스 번호가<br>초기화 되는 문제가 있었다. 포비가 만든 팩토리 메소드를 참조해서<br>생성자에서 로또 번호를 만들면서 보너스 초기화가 안되는 코드를 생각해봐야겠다.</li>
-</ul>
-<ul>
+<li>Lotto, WinningLotto 상속/생성자 부분 정리 + 부모 타입 선언 후 자식 생성했을 때 생성 과정 정리<br>전에 로또 생성자에서 로또 번호, 보너스 번호를 만들다가 보너스 번호가 초기화 되는 문제가 있었다.<br>(super() 실행에서 보너스 번호 만들고 그 뒤 자식생성자 실행할 때 초기화 되는 걸로 추측됨)<br>포비가 만든 팩토리 메소드를 참조해서 생성자에서 로또 번호를 만들지만 보너스 초기화는 안되는 코드를<br>짜고 싶다.</li>
 <li>동생이 입원해서 집에 일찍 와야할 것 같다.</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/31/171031/" data-id="cj9fru9zz0002tuwhiri6eony" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/31/171031/" data-id="cj9fsb2lr00040awherxv8q3p" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -120,7 +115,7 @@
   
   
     <a href="/2017/10/29/171027/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">171027</div>
     </a>
   
@@ -153,7 +148,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -190,7 +185,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Jin<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
