@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>171027 | log for study</title>
+  <title>171031 | log for study</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="한 일 로또 구현  vim, ssh로 리눅스 접속 강의  aws에서 서버 만듦 -&amp;gt; 비밀키 다운받음.  cd 다운받은 폴더 -&amp;gt; chmod 400 키.pem ssh -i 키.pem ubuntu@ip주소-&amp;gt; 서버 접속됨   알고리즘 강의  공간(메모리)/시간 복잡도 계산 알고리즘을 잘 한다? 재귀호출, 함수 사용법, 메모리구조 이해, 객체/배">
+  <meta name="description" content="오늘 한 일 TDD 강의 TDD 해보기..(별로 못 함..) 면담 로또 리뷰 받고 수정참 배운 게 많은데 너무 피곤해서 정리를 못 하겠다…  내일 할 일 Lotto, WinningLotto 리뷰 상속/생성자 부분 정리    부모 클래스 선언 후 자식 생성자 호출했을 때 어떤 식으로 생성되는 지 정리전에 로또 생성자에서 로또 번호, 보너스 번호를 만들다가 보">
 <meta property="og:type" content="article">
-<meta property="og:title" content="171027">
-<meta property="og:url" content="http://chemainus04.github.io/2017/10/29/171027/index.html">
+<meta property="og:title" content="171031">
+<meta property="og:url" content="http://chemainus04.github.io/2017/10/31/171031/index.html">
 <meta property="og:site_name" content="log for study">
-<meta property="og:description" content="한 일 로또 구현  vim, ssh로 리눅스 접속 강의  aws에서 서버 만듦 -&amp;gt; 비밀키 다운받음.  cd 다운받은 폴더 -&amp;gt; chmod 400 키.pem ssh -i 키.pem ubuntu@ip주소-&amp;gt; 서버 접속됨   알고리즘 강의  공간(메모리)/시간 복잡도 계산 알고리즘을 잘 한다? 재귀호출, 함수 사용법, 메모리구조 이해, 객체/배">
+<meta property="og:description" content="오늘 한 일 TDD 강의 TDD 해보기..(별로 못 함..) 면담 로또 리뷰 받고 수정참 배운 게 많은데 너무 피곤해서 정리를 못 하겠다…  내일 할 일 Lotto, WinningLotto 리뷰 상속/생성자 부분 정리    부모 클래스 선언 후 자식 생성자 호출했을 때 어떤 식으로 생성되는 지 정리전에 로또 생성자에서 로또 번호, 보너스 번호를 만들다가 보">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-30T01:01:58.819Z">
+<meta property="og:updated_time" content="2017-10-31T15:31:40.991Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="171027">
-<meta name="twitter:description" content="한 일 로또 구현  vim, ssh로 리눅스 접속 강의  aws에서 서버 만듦 -&amp;gt; 비밀키 다운받음.  cd 다운받은 폴더 -&amp;gt; chmod 400 키.pem ssh -i 키.pem ubuntu@ip주소-&amp;gt; 서버 접속됨   알고리즘 강의  공간(메모리)/시간 복잡도 계산 알고리즘을 잘 한다? 재귀호출, 함수 사용법, 메모리구조 이해, 객체/배">
+<meta name="twitter:title" content="171031">
+<meta name="twitter:description" content="오늘 한 일 TDD 강의 TDD 해보기..(별로 못 함..) 면담 로또 리뷰 받고 수정참 배운 게 많은데 너무 피곤해서 정리를 못 하겠다…  내일 할 일 Lotto, WinningLotto 리뷰 상속/생성자 부분 정리    부모 클래스 선언 후 자식 생성자 호출했을 때 어떤 식으로 생성되는 지 정리전에 로또 생성자에서 로또 번호, 보너스 번호를 만들다가 보">
   
     <link rel="alternate" href="/atom.xml" title="log for study" type="application/atom+xml">
   
@@ -68,10 +68,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-171027" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-171031" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/10/29/171027/" class="article-date">
-  <time datetime="2017-10-29T10:59:31.000Z" itemprop="datePublished">2017-10-29</time>
+    <a href="/2017/10/31/171031/" class="article-date">
+  <time datetime="2017-10-31T14:52:34.000Z" itemprop="datePublished">2017-10-31</time>
 </a>
     
   </div>
@@ -82,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      171027
+      171031
     </h1>
   
 
@@ -90,35 +90,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="한-일"><a href="#한-일" class="headerlink" title="한 일"></a>한 일</h3><ol>
-<li><p>로또 구현</p>
-</li>
-<li><p>vim, ssh로 리눅스 접속 강의</p>
-<ul>
-<li>aws에서 서버 만듦 -&gt; 비밀키 다운받음. </li>
-<li>cd 다운받은 폴더 -&gt; chmod 400 키.pem</li>
-<li>ssh -i 키.pem ubuntu@ip주소-&gt; 서버 접속됨</li>
-</ul>
-</li>
-<li><p>알고리즘 강의</p>
-<ul>
-<li>공간(메모리)/시간 복잡도 계산</li>
-<li>알고리즘을 잘 한다? 재귀호출, 함수 사용법, 메모리구조 이해, 객체/배열/참조/포인터/메모리 할당에 대한 이해</li>
-<li>기본 자료구조: 배열, 리스트, 해시, 스택, 큐, 트리, 그래프, 해시</li>
-<li>정렬, 선택, 버블, 삽입, 쉘, 퀵, 기수, 힙</li>
-<li>트리와 검색: 순차 검색, 2진 검색, BTS 검색, AVL 트리, 레드블랙 트리, MST, B-트리</li>
-<li>그래프와 탐색: </li>
-<li>알고리즘 전략: 휴리스틱, 그리디, 몬테카를로, 분할 정복, 다이나믹 프로그램, 백 트래킹</li>
-<li>수학적지식:이산수학(+선형대수) - 칸 아카데미, 독학사 이산수학, ‘Rozen의 이산수학’ </li>
-<li>사이트: 백준온라인, hackerrank, leetcode, topcoder</li>
-</ul>
-</li>
+        <h3 id="오늘-한-일"><a href="#오늘-한-일" class="headerlink" title="오늘 한 일"></a>오늘 한 일</h3><ol>
+<li>TDD 강의</li>
+<li>TDD 해보기..(별로 못 함..)</li>
+<li>면담</li>
+<li>로또 리뷰 받고 수정<br>참 배운 게 많은데 너무 피곤해서 정리를 못 하겠다…</li>
 </ol>
+<h3 id="내일-할-일"><a href="#내일-할-일" class="headerlink" title="내일 할 일"></a>내일 할 일</h3><ul>
+<li>Lotto, WinningLotto 리뷰 상속/생성자 부분 정리 </li>
+</ul>
+<ul>
+<li>부모 클래스 선언 후 자식 생성자 호출했을 때 어떤 식으로 생성되는 지 정리<br>전에 로또 생성자에서 로또 번호, 보너스 번호를 만들다가 보너스 번호가<br>초기화 되는 문제가 있었다. 포비가 만든 팩토리 메소드를 참조해서<br>생성자에서 로또 번호를 만들면서 보너스 초기화가 안되는 코드를 생각해봐야겠다.</li>
+</ul>
+<ul>
+<li>동생이 입원해서 집에 일찍 와야할 것 같다.</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/29/171027/" data-id="cj9frua070005tuwh3n48kwq0" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/31/171031/" data-id="cj9fru9zz0002tuwhiri6eony" class="article-share-link">Share</a>
       
       
     </footer>
@@ -127,19 +118,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/10/31/171031/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          171031
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/10/27/171026/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/10/29/171027/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">171026</div>
+      <div class="article-nav-title">171027</div>
     </a>
   
 </nav>
