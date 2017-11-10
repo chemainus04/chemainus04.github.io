@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>171027 | log for study</title>
+  <title>171110 | log for study</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="한 일 로또 구현  vim, ssh로 리눅스 접속 강의  aws에서 서버 만듦 -&amp;gt; 비밀키 다운받음.  cd 다운받은 폴더 -&amp;gt; chmod 400 키.pem ssh -i 키.pem ubuntu@ip주소-&amp;gt; 서버 접속됨   알고리즘 강의  공간(메모리)/시간 복잡도 계산 알고리즘을 잘 한다? 재귀호출, 함수 사용법, 메모리구조 이해, 객체/배">
+  <meta name="description" content="한 일 로그 강의 리팩토링   컨트롤러에서 뷰에 객체를 계속 넘겨주다보니 메소드 분리가 힘들었다. DTO를 만들자.     getList 안 쓰는 방법-&amp;gt; list 가져올 객체에 메소드를 만들어서 기능을 분리.     junit - 필드를 다 내부 연산으로 생성해서 테스트 코드 짜기 힘들었다.이번에는 테스트용 생성자나 setList를 만들어서 처리했는">
 <meta property="og:type" content="article">
-<meta property="og:title" content="171027">
-<meta property="og:url" content="http://chemainus04.github.io/2017/10/29/171027/index.html">
+<meta property="og:title" content="171110">
+<meta property="og:url" content="http://chemainus04.github.io/2017/11/11/171110/index.html">
 <meta property="og:site_name" content="log for study">
-<meta property="og:description" content="한 일 로또 구현  vim, ssh로 리눅스 접속 강의  aws에서 서버 만듦 -&amp;gt; 비밀키 다운받음.  cd 다운받은 폴더 -&amp;gt; chmod 400 키.pem ssh -i 키.pem ubuntu@ip주소-&amp;gt; 서버 접속됨   알고리즘 강의  공간(메모리)/시간 복잡도 계산 알고리즘을 잘 한다? 재귀호출, 함수 사용법, 메모리구조 이해, 객체/배">
+<meta property="og:description" content="한 일 로그 강의 리팩토링   컨트롤러에서 뷰에 객체를 계속 넘겨주다보니 메소드 분리가 힘들었다. DTO를 만들자.     getList 안 쓰는 방법-&amp;gt; list 가져올 객체에 메소드를 만들어서 기능을 분리.     junit - 필드를 다 내부 연산으로 생성해서 테스트 코드 짜기 힘들었다.이번에는 테스트용 생성자나 setList를 만들어서 처리했는">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-30T01:01:58.819Z">
+<meta property="og:updated_time" content="2017-11-10T16:58:00.738Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="171027">
-<meta name="twitter:description" content="한 일 로또 구현  vim, ssh로 리눅스 접속 강의  aws에서 서버 만듦 -&amp;gt; 비밀키 다운받음.  cd 다운받은 폴더 -&amp;gt; chmod 400 키.pem ssh -i 키.pem ubuntu@ip주소-&amp;gt; 서버 접속됨   알고리즘 강의  공간(메모리)/시간 복잡도 계산 알고리즘을 잘 한다? 재귀호출, 함수 사용법, 메모리구조 이해, 객체/배">
+<meta name="twitter:title" content="171110">
+<meta name="twitter:description" content="한 일 로그 강의 리팩토링   컨트롤러에서 뷰에 객체를 계속 넘겨주다보니 메소드 분리가 힘들었다. DTO를 만들자.     getList 안 쓰는 방법-&amp;gt; list 가져올 객체에 메소드를 만들어서 기능을 분리.     junit - 필드를 다 내부 연산으로 생성해서 테스트 코드 짜기 힘들었다.이번에는 테스트용 생성자나 setList를 만들어서 처리했는">
   
     <link rel="alternate" href="/atom.xml" title="log for study" type="application/atom+xml">
   
@@ -68,10 +68,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-171027" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-171110" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/10/29/171027/" class="article-date">
-  <time datetime="2017-10-29T10:59:31.000Z" itemprop="datePublished">2017-10-29</time>
+    <a href="/2017/11/11/171110/" class="article-date">
+  <time datetime="2017-11-10T15:15:00.000Z" itemprop="datePublished">2017-11-11</time>
 </a>
     
   </div>
@@ -82,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      171027
+      171110
     </h1>
   
 
@@ -91,34 +91,35 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="한-일"><a href="#한-일" class="headerlink" title="한 일"></a>한 일</h3><ol>
-<li><p>로또 구현</p>
+<li>로그 강의</li>
+<li>리팩토링 <ul>
+<li><ol>
+<li>컨트롤러에서 뷰에 객체를 계속 넘겨주다보니 메소드 분리가 힘들었다. DTO를 만들자. </li>
+</ol>
 </li>
-<li><p>vim, ssh로 리눅스 접속 강의</p>
-<ul>
-<li>aws에서 서버 만듦 -&gt; 비밀키 다운받음. </li>
-<li>cd 다운받은 폴더 -&gt; chmod 400 키.pem</li>
-<li>ssh -i 키.pem ubuntu@ip주소-&gt; 서버 접속됨</li>
+<li><ol>
+<li>getList 안 쓰는 방법-&gt; list 가져올 객체에 메소드를 만들어서 기능을 분리.</li>
+</ol>
+</li>
 </ul>
 </li>
-<li><p>알고리즘 강의</p>
-<ul>
-<li>공간(메모리)/시간 복잡도 계산</li>
-<li>알고리즘을 잘 한다? 재귀호출, 함수 사용법, 메모리구조 이해, 객체/배열/참조/포인터/메모리 할당에 대한 이해</li>
-<li>기본 자료구조: 배열, 리스트, 해시, 스택, 큐, 트리, 그래프, 해시</li>
-<li>정렬, 선택, 버블, 삽입, 쉘, 퀵, 기수, 힙</li>
-<li>트리와 검색: 순차 검색, 2진 검색, BTS 검색, AVL 트리, 레드블랙 트리, MST, B-트리</li>
-<li>그래프와 탐색: </li>
-<li>알고리즘 전략: 휴리스틱, 그리디, 몬테카를로, 분할 정복, 다이나믹 프로그램, 백 트래킹</li>
-<li>수학적지식:이산수학(+선형대수) - 칸 아카데미, 독학사 이산수학, ‘Rozen의 이산수학’ </li>
-<li>사이트: 백준온라인, hackerrank, leetcode, topcoder</li>
-</ul>
-</li>
+<li>junit - 필드를 다 내부 연산으로 생성해서 테스트 코드 짜기 힘들었다.<br>이번에는 테스트용 생성자나 setList를 만들어서 처리했는데 그렇게 해도 되는지 모르겠다.</li>
+</ol>
+<h3 id="배운-것-포비-리뷰"><a href="#배운-것-포비-리뷰" class="headerlink" title="배운 것 - 포비 리뷰"></a>배운 것 - 포비 리뷰</h3><ol>
+<li>파라미터가 3개 이상이면 설계 잘 못 했는지 의심해보기</li>
+<li>객체에서 getter, getList 등으로 데이터를 꺼내오는 것은 캡슐화 위반.<br>(getlist의 경우 자료구조를 set으로 바꾸면 getList 사용하는 부분을 다 바꿔야 하는 문제도 있다.)<br>예) Lottos 클래스의 sumMoney()에서 lotto.getCommonCount() 를 사용하는 부분이 있다.<br>→  그 부분을 떼서 Lotto 클래스에 getPrize()로 만들어줌. </li>
+<li>되도록 로컬 변수 사용. 메소드를 넘나들 때만 필드를 만듦.<br>예) InputView 클래스의 Scanner 같은 경우는 필드로 만들어도 됨.<br>(or 입력 받는 메소드가 분산돼 있는데, 그걸 하나로 모아서 DTO에 값 넘겨주면<br>scanner를 해당 메소드의 로컬 변수로 사용해도 된다. 메소드를 넘나들 필요 없어지니까)</li>
+<li>DTO를 사용하면 View 단에 계속 값을 주고 받느라 로직 객체를 넘길 필요가 없다.</li>
+</ol>
+<h3 id="주말에-할-일"><a href="#주말에-할-일" class="headerlink" title="주말에 할 일"></a>주말에 할 일</h3><ol>
+<li>복습</li>
+<li>함수형 프로그래밍, 예외처리, log 공부</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/29/171027/" data-id="cj9u5c02y0005kywh9q9b2ze3" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/11/11/171110/" data-id="cj9u5c02t0003kywhevg6z0h1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -127,19 +128,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/10/31/171031/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          171031
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/10/27/171026/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/10/31/171031/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">171026</div>
+      <div class="article-nav-title">171031</div>
     </a>
   
 </nav>

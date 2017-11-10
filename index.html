@@ -53,9 +53,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chemainus04.github.io"></form>
@@ -65,6 +65,67 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-171110" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/11/171110/" class="article-date">
+  <time datetime="2017-11-10T15:15:00.000Z" itemprop="datePublished">2017-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/11/171110/">171110</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="한-일"><a href="#한-일" class="headerlink" title="한 일"></a>한 일</h3><ol>
+<li>로그 강의</li>
+<li>리팩토링 <ul>
+<li><ol>
+<li>컨트롤러에서 뷰에 객체를 계속 넘겨주다보니 메소드 분리가 힘들었다. DTO를 만들자. </li>
+</ol>
+</li>
+<li><ol>
+<li>getList 안 쓰는 방법-&gt; list 가져올 객체에 메소드를 만들어서 기능을 분리.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>junit - 필드를 다 내부 연산으로 생성해서 테스트 코드 짜기 힘들었다.<br>이번에는 테스트용 생성자나 setList를 만들어서 처리했는데 그렇게 해도 되는지 모르겠다.</li>
+</ol>
+<h3 id="배운-것-포비-리뷰"><a href="#배운-것-포비-리뷰" class="headerlink" title="배운 것 - 포비 리뷰"></a>배운 것 - 포비 리뷰</h3><ol>
+<li>파라미터가 3개 이상이면 설계 잘 못 했는지 의심해보기</li>
+<li>객체에서 getter, getList 등으로 데이터를 꺼내오는 것은 캡슐화 위반.<br>(getlist의 경우 자료구조를 set으로 바꾸면 getList 사용하는 부분을 다 바꿔야 하는 문제도 있다.)<br>예) Lottos 클래스의 sumMoney()에서 lotto.getCommonCount() 를 사용하는 부분이 있다.<br>→  그 부분을 떼서 Lotto 클래스에 getPrize()로 만들어줌. </li>
+<li>되도록 로컬 변수 사용. 메소드를 넘나들 때만 필드를 만듦.<br>예) InputView 클래스의 Scanner 같은 경우는 필드로 만들어도 됨.<br>(or 입력 받는 메소드가 분산돼 있는데, 그걸 하나로 모아서 DTO에 값 넘겨주면<br>scanner를 해당 메소드의 로컬 변수로 사용해도 된다. 메소드를 넘나들 필요 없어지니까)</li>
+<li>DTO를 사용하면 View 단에 계속 값을 주고 받느라 로직 객체를 넘길 필요가 없다.</li>
+</ol>
+<h3 id="주말에-할-일"><a href="#주말에-할-일" class="headerlink" title="주말에 할 일"></a>주말에 할 일</h3><ol>
+<li>복습</li>
+<li>함수형 프로그래밍, 예외처리, log 공부</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chemainus04.github.io/2017/11/11/171110/" data-id="cj9u5c02t0003kywhevg6z0h1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-171031" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -102,7 +163,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/31/171031/" data-id="cj9fsb2lr00040awherxv8q3p" class="article-share-link">Partager</a>
+      <a data-url="http://chemainus04.github.io/2017/10/31/171031/" data-id="cj9u5c03a0008kywhecimcyf7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -162,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/29/171027/" data-id="cj9fsb2ln00030awhm0jw38j1" class="article-share-link">Partager</a>
+      <a data-url="http://chemainus04.github.io/2017/10/29/171027/" data-id="cj9u5c02y0005kywh9q9b2ze3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -213,7 +274,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/27/171026/" data-id="cj9fsb2la00000awhy8klhl78" class="article-share-link">Partager</a>
+      <a data-url="http://chemainus04.github.io/2017/10/27/171026/" data-id="cj9u5c02w0004kywhcz4jcis5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -262,7 +323,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/25/171025/" data-id="cj9fsb2ll00020awhjj44tt1m" class="article-share-link">Partager</a>
+      <a data-url="http://chemainus04.github.io/2017/10/25/171025/" data-id="cj9u5c02r0002kywh9s6p8bme" class="article-share-link">Share</a>
       
       
     </footer>
@@ -349,7 +410,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/24/171024/" data-id="cj9fsb2lh00010awhwp8j1f0l" class="article-share-link">Partager</a>
+      <a data-url="http://chemainus04.github.io/2017/10/24/171024/" data-id="cj9u5c02h0000kywhx22e9izt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -444,7 +505,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/23/2017-10-20-171020/" data-id="cj9fsb2m000070awhuurea0co" class="article-share-link">Partager</a>
+      <a data-url="http://chemainus04.github.io/2017/10/23/2017-10-20-171020/" data-id="cj9u5c0340007kywh95zbhpib" class="article-share-link">Share</a>
       
       
     </footer>
@@ -542,7 +603,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/23/171023/" data-id="cj9fsb2ls00050awhfvz6871o" class="article-share-link">Partager</a>
+      <a data-url="http://chemainus04.github.io/2017/10/23/171023/" data-id="cj9u5c02o0001kywh2m355du0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -587,7 +648,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/17/hello-world/" data-id="cj9fsb2lw00060awhl0ooslng" class="article-share-link">Partager</a>
+      <a data-url="http://chemainus04.github.io/2017/10/17/hello-world/" data-id="cj9u5c0310006kywhfyz8fyid" class="article-share-link">Share</a>
       
       
     </footer>
@@ -614,7 +675,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
     </div>
   </div>
 
@@ -622,9 +683,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/11/11/171110/">171110</a>
+          </li>
         
           <li>
             <a href="/2017/10/31/171031/">171031</a>
@@ -642,10 +707,6 @@
             <a href="/2017/10/25/171025/">171025</a>
           </li>
         
-          <li>
-            <a href="/2017/10/24/171024/">171024</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -659,7 +720,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Jin<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
