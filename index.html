@@ -89,17 +89,22 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="볼링-스텝1-진행-과정"><a href="#볼링-스텝1-진행-과정" class="headerlink" title="볼링 스텝1 진행 과정"></a>볼링 스텝1 진행 과정</h3><ol>
-<li>필요할 것 같은 클래스를 먼저 다 만들고 그 안에 메소드 구현하려 함.<br><br> → 클래스가 너무 많아서 메소드를 어떻게 만들지, 객체끼리 어떻게  연결할 지 갈피가 안 잡힘.</li>
-<li>BowlingGame 클래스에 기능 다 만들고 메소드 리팩토링하면서 테스트<br><br> → 객체지향, 클래스 분리에 대해 고민하지 않고 기능 돌아가는 것에만 집중. 시간 단축됨.  </li>
+<li>필요할 것 같은 클래스를 먼저 다 만들고 그 안에 메소드 구현하려 함.<br>   → 클래스가 너무 많아서 메소드를 어떻게 만들지, 객체끼리 어떻게  연결할 지 갈피가 안 잡힘.</li>
+<li>BowlingGame 클래스에 기능 다 만들고 메소드 리팩토링하면서 테스트<br>→ 객체지향, 클래스 분리에 대해 고민하지 않고 기능 돌아가는 것에만 집중. 시간 단축됨.  </li>
 <li>InputView, ResultView 분리</li>
 <li>컨트롤러 분리를 위해 Model 클래스로 Frame 만듦</li>
-<li>Frame 에서 쓰러진 핀 개수랑 상태 표시를 저장하는 리스트 필드, 그와 관련된 메소드를 Pin 클래스로 분리<br><br> → 확실히 클래스 먼저 나누고 구현하는 것 보다 로직 이해하기 쉽고, 시간도 단축됨.  <p>  이때 테스트 케이스 다 만들어서 junit으로 테스트 했는데, 확실히 편하다는 걸 느꼈다. 초반에 테스트를 위해 메소드를 만들거나 세팅할 때만 좀 번거롭고, 그 뒤로 소스 변경할 때마다 테스트코드 돌리기만 하면 에러 있는지 없는지 확인할 수 있어서 좋았다.</p><br>- 리뷰: Pin이 프레임 돌 때마다 핀, 출력값 리스트를 추가하는데 프레임을 10개 만들고 그 안에서 쓰러진 핀 개수만 변수로 들고 있는 게 어떨까? 그럼 리스트를 만들 필요도 없어진다.<p></p>  </li>
-<li>클래스 설계 변경, 그에 따라 메소드 대거 변경 +  테스트 + 메소드 쪼갬<br><br> → 변화해서 쌓이는 값을 저장한다고 생각하면 무조건 리스트를 떠올렸던 것 같다. 프레임 객체를 10개 만들고 거기서 핀 변수를 가진다는 생각을 못 했는데, 좀 더 유연하게 생각하는 연습이 필요하다. <p></p><p>- 리뷰: 프레임이 끝났는지 여부(hasNext), 콘솔 출력값(Status)을 가진 필드를 없애고, 밖에서 메소드 불러서 해결하도록 하자. tryOne(), tryTwo()가 계속 이 필드 값들을 바꾸고 있는데 그 때문에 한 번에 여러 상태 값이 변함. 즉, 메소드가 여러가지 일을 하고 있는 것. 메소드를 쪼개야 재사용성이 높아진다. </p><br><p> 부모 클래스에서 필드를 private으로 못 쓸 경우, 자식 클래스로 필드를 내리거나 해당 필드를 쓰는 메소드 기능을 부모 클래스로 올려라. 자식 클래스들 메소드 내용이 다르면 공통되는 부분을 떼서 부모 클래스로 보낼 수 있는지 고민해라.</p></li>
-<li>Frame의 필드 2개 없앰. 해당 필드를 변경하고 가져오는 메소드 없앰. 그것을 대신한 메소드를 만들면서 연쇄적으로 많은 메소드 수정. 리팩토링.<br><br> → 포비 말을 듣고 나서야 핀 변수를 가지고 프레임이 끝났는지 나타낼 수 있다는 걸 알았다. 은연중에 어떤 상태가 있으면 당연히 상태값 필드를 만들어야 한다고 생각했던 것 같다. 그게 제일 쉽게 느껴지기도 하고. 앞으로는 필드를 만들 때 꼭 필요한지 생각할 것 같다.     </li>
+<li>Frame 에서 쓰러진 핀 개수랑 상태 표시를 저장하는 리스트 필드, 그와 관련된 메소드를 Pin 클래스로 분리<br>→ 클래스 먼저 나누고 구현하는 것 보다 로직 이해하기 쉽고, 시간도 단축됨.<br>  이때 테스트 케이스 만들어서 junit으로 테스트 했는데, 확실히 편했다. 초반에 테스트를 위해 메소드를 만들거나 세팅할 때만 좀 번거롭고, 그 뒤로 소스 변경할 때마다 테스트코드만 돌려서 에러 확인할 수 있어서 좋았다.<ul>
+<li>리뷰: Pin이 프레임 돌 때마다 핀, 출력값 리스트를 추가하는데 프레임을 10개 만들고 그 안에서 쓰러진 핀 개수만 변수로 들고 있는 게 어떨까? 그럼 리스트를 만들 필요도 없어진다.</li>
+</ul>
+</li>
+<li>클래스 설계 변경, 그에 따라 메소드 대거 변경 +  테스트 + 메소드 쪼갬<br>→ 변화해서 쌓이는 값을 저장한다고 생각하면 무조건 리스트를 떠올렸던 것 같다. 프레임 객체를 10개 만들고 거기서 핀 변수를 가진다는 생각을 못 했는데, 좀 더 유연하게 생각하는 연습이 필요하다.<ul>
+<li>리뷰: 프레임이 끝났는지 여부(hasNext), 콘솔 출력값(Status)을 가진 필드를 없애고, 밖에서 메소드 불러서 해결하도록 하자. tryOne(), tryTwo()가 계속 이 필드 값들을 바꾸고 있는데 그 때문에 한 번에 여러 상태 값이 변함. 즉, 메소드가 여러가지 일을 하고 있는 것. 메소드를 쪼개야 재사용성이 높아진다.<br>부모 클래스에서 필드를 private으로 못 쓸 경우, 자식 클래스로 필드를 내리거나 해당 필드를 쓰는 메소드 기능을 부모 클래스로 올려라. 자식 클래스들 메소드 내용이 다르면 공통되는 부분을 떼서 부모 클래스로 보낼 수 있는지 고민해라.</li>
+</ul>
+</li>
+<li>Frame의 필드 2개 없앰. 해당 필드를 변경하고 가져오는 메소드 없앰. 그것을 대신한 메소드를 만들면서 연쇄적으로 많은 메소드 수정. 리팩토링.<br>→ 포비 말을 듣고 나서야 핀 변수를 가지고 프레임이 끝났는지 나타낼 수 있다는 걸 알았다. 은연중에 어떤 상태가 있으면 당연히 상태값 필드를 만들어야 한다고 생각했던 것 같다. 그게 제일 쉽게 느껴지기도 하고. 앞으로는 필드를 만들 때 꼭 필요한지 생각할 것 같다.     </li>
 <li>codacy에 걸린 접근제한자 변경 - default 접근제한자를 사용하지 않도록 바꿈.</li>
 </ol>
-<h3 id="느낀점"><a href="#느낀점" class="headerlink" title="느낀점"></a>느낀점</h3><p> 전에 기능을 다 완성하고 클래스를 나눴더니 메소드들을 바꿔야 했던 기억이 있어서 0단계에서는 처음부터 클래스를 분류하려고 했다.  그런데 그때보다 복잡한 프로그램이라 클래스를 어떻게 나눠야할 지 확신이 서지 않았고 너무 많은 클래스를 만들어서 정리가 되지 않았다.</p><br><p> 그런데 포비 조언대로 1단계부터는 방식을 바꿔 다 만들고 조금씩 수정했더니, 내가 어떤 클래스에서 무슨 일을 하는지 로직을 이해하면서 만드니까 부담스럽지 않았다. 그리고 5, 6단계에서 메소드 여러개를 수정했는데 내용이 1줄에서 5줄 사이인 메소드들이라 이 또한 부담을 줄여줬다. (수정을 할때 바꿀 부분이 적어서 그런 것 같은데 이 부분은 다음 스텝하면서 더 관찰하고 정리해야겠다.) </p><br><p> 이 두가지 이유로 부담이 줄어드니까 코드 짜고 수정하는 게 재미있었다. 0단계에서는 며칠간 아무 진척도 없어서 우울했는데 1단계 이후부터는 속도도 나고 계속 조금씩 변하는 게 눈에 보이니까 더 나아갈 힘이 생겼다. 다만 stream, enum, 객체지향적 설계, 그 외 배운 것들 다 신경 안 쓰고 만들어서 그런 것들을 고려하면서 만드려면 어떻게 해야할 지가 고민이다. 그렇지만 일단 볼링게임에서는 최대한 단순하게 만들고 피드백 받으면 고치는 데 중점을 두고 싶다 </p> 
-
+<h3 id="느낀점"><a href="#느낀점" class="headerlink" title="느낀점"></a>느낀점</h3><p> 전에 기능을 다 완성하고 클래스를 나눴더니 메소드들을 바꿔야 했던 기억이 있어서 0단계에서는 처음부터 클래스를 분류하려고 했다.  그런데 그때보다 복잡한 프로그램이라 클래스를 어떻게 나눠야할 지 확신이 서지 않았고 너무 많은 클래스를 만들어서 정리가 되지 않았다.<br> 그런데 포비 조언대로 1단계부터는 방식을 바꿔 다 만들고 조금씩 수정했더니, 내가 어떤 클래스에서 무슨 일을 하는지 로직을 이해하면서 만드니까 부담스럽지 않았다. 그리고 5, 6단계에서 메소드 여러개를 수정했는데 내용이 1줄에서 5줄 사이인 메소드들이라 이 또한 부담을 줄여줬다. (수정을 할때 바꿀 부분이 적어서 그런 것 같은데 이 부분은 다음 스텝하면서 더 관찰하고 정리해야겠다.)<br> 이 두가지 이유로 부담이 줄어드니까 코드 짜고 수정하는 게 재미있었다. 0단계에서는 며칠간 아무 진척도 없어서 우울했는데 1단계 이후부터는 속도도 나고 계속 조금씩 변하는 게 눈에 보이니까 더 나아갈 힘이 생겼다. 다만 stream, enum, 객체지향적 설계, 그 외 배운 것들 다 신경 안 쓰고 만들어서 그런 것들을 고려하면서 만드려면 어떻게 해야할 지가 고민이다. 그렇지만 일단 볼링게임에서는 최대한 단순하게 만들고 피드백 받으면 고치는 데 중점을 두고 싶다</p>
 <h3 id="그-외-리뷰"><a href="#그-외-리뷰" class="headerlink" title="그 외 리뷰"></a>그 외 리뷰</h3><ul>
 <li>부모 클래스에 내용 없는 메소드 쓸 거면 추상 클래스로 바꿔서 추상메소드 구현</li>
 <li>인스턴스 변수 안 쓰면 static 메소드로(이 부분은 다시 질문하기)</li>
@@ -114,7 +119,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/11/22/171122/" data-id="cjab430vs0006xbwhdeybt9ku" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/11/22/171122/" data-id="cjab4fi3z00085awhqf863c2b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -175,7 +180,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/11/11/171110/" data-id="cjab430vp0005xbwhn6vy5rc9" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/11/11/171110/" data-id="cjab4fi3s00065awh29twnm1a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -221,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/31/171031/" data-id="cjab430vn0004xbwhtlbmlk2o" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/31/171031/" data-id="cjab4fi3m00045awhkliwhi4z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -281,7 +286,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/29/171027/" data-id="cjab430vj0003xbwhd5hsiwvx" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/29/171027/" data-id="cjab4fi3p00055awhhpyyjbf7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -332,7 +337,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/27/171026/" data-id="cjab430vz0008xbwh3lrifjyq" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/27/171026/" data-id="cjab4fi3k00035awhrdr2boue" class="article-share-link">Share</a>
       
       
     </footer>
@@ -381,7 +386,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/25/171025/" data-id="cjab430vh0002xbwht34obi44" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/25/171025/" data-id="cjab4fi3j00025awhb48mg4rs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -468,7 +473,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/24/171024/" data-id="cjab430ve0001xbwhclju3o73" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/24/171024/" data-id="cjab4fi3e00015awhs24uofeo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -563,7 +568,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/23/2017-10-20-171020/" data-id="cjab430w10009xbwhk39gtlx3" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/23/2017-10-20-171020/" data-id="cjab4fi3u00075awh0axcdkx5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -661,7 +666,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/23/171023/" data-id="cjab430v60000xbwhc5ph6dpb" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/23/171023/" data-id="cjab4fi3700005awhe6fwilia" class="article-share-link">Share</a>
       
       
     </footer>
@@ -706,7 +711,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://chemainus04.github.io/2017/10/17/hello-world/" data-id="cjab430vu0007xbwhpurnw3lp" class="article-share-link">Share</a>
+      <a data-url="http://chemainus04.github.io/2017/10/17/hello-world/" data-id="cjab4fi4100095awhc7tfipt7" class="article-share-link">Share</a>
       
       
     </footer>
